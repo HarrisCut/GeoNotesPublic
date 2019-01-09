@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="300dp"
+    android:layout_height="400dp"
+    android:padding="5dp"
+    android:layout_marginBottom="75dp"
+    android:background="@color/colorWhite"
+    android:layout_gravity="center"
+    tools:context=".AddGeoNoteFragment"
+    >
+
+    <TextView
+        android:id="@+id/name_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/name_edit"
+        app:layout_constraintBottom_toBottomOf="@id/name_edit"
+        app:layout_constraintTop_toTopOf="parent"
+
+        />
+
+    <EditText
+        android:id="@+id/name_edit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/name_text"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/geonote_body"
+
+        />
+
+    <EditText
+        android:id="@+id/geonote_body"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/name_edit"
+        app:layout_constraintBottom_toTopOf="@id/save_geonote"
+        android:textAlignment="textStart"
+        android:gravity="top|start"
+        android:hint="write me"
+
+        />
+
+    <Button
+        android:id="@+id/save_geonote"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/geonote_body"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/cancel_geonote"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="SAVE"
+
+        />
+
+    <Button
+        android:id="@+id/cancel_geonote"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/geonote_body"
+        app:layout_constraintStart_toEndOf="@id/save_geonote"
+        app:layout_constraintEnd_toStartOf="@id/delete_geonote"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="Cancel"
+
+        />
+
+    <Button
+        android:id="@+id/delete_geonote"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/geonote_body"
+        app:layout_constraintStart_toEndOf="@id/cancel_geonote"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="Delete"
+        />
+
+</android.support.constraint.ConstraintLayout>
